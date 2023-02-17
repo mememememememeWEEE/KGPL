@@ -7,9 +7,10 @@
 
 #include "../lib/glfw3.h"
 
-#define LOG(...) printf(__VA_ARGS__)
+#define LOG(...) fprintf(stdout, __VA_ARGS__)
 
 namespace KGPL {
+
 	class Window final {
 		protected:
 			GLFWwindow* window;
@@ -41,8 +42,3 @@ namespace KGPL {
 			Scene* scene;
 	};
 }
-
-int main(void)  {
-	KGPL::Window window(600, 400, "hello");
-} 
-

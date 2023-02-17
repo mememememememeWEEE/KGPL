@@ -1,0 +1,2 @@
+C:/Users/rando/OneDrive/Documents/GitHub/KGPL/src/build/CMakeFiles/edit_cache.dir
+C:/Users/rando/OneDrive/Documents/GitHub/KGPL/src/build/CMakeFiles/rebuild_cache.dir
