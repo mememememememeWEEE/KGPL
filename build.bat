@@ -1,0 +1,1 @@
+ g++ .\src\kgpl.h .\src\kgpl_window.cpp C:\"Program Files (x86)"\GLFW\lib\libglfw3.a -lopengl32 -lgdi32

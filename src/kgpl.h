@@ -1,19 +1,23 @@
 #pragma once
 #include <cstdint>
+#include <stdint.h>
 #include <string>
 #include <cstdio>
 #include <vector>
+
+#include "../lib/glfw3.h"
 
 #define LOG(...) printf(__VA_ARGS__)
 
 namespace KGPL {
 	class Window final {
 		protected:
+			GLFWwindow* window;
 			uint32_t width, height;	
 			std::string title;
 
 		public:
-			Window();
+			Window(uint32_t width, uint32_t height, const std::string& title);
 			~Window();
 
 			auto inline getWidth() const { return width; }
@@ -37,4 +41,8 @@ namespace KGPL {
 			Scene* scene;
 	};
 }
+
+int main(void)  {
+	KGPL::Window window(600, 400, "hello");
+} 
 
