@@ -4,7 +4,6 @@ project(KGPL VERSION 0.1.1)
 
 find_package(OpenGL REQUIRED)
 
-add_executable(example)
+add_library(KGPL kgpl_window.cpp)
 
-#only for windows
-target_link_libraries(KGPL -lgdi32)
+add_executable(KGPL example)

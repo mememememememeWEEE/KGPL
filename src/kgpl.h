@@ -27,18 +27,28 @@ namespace KGPL {
 	};
 
 	class Asset final {
-
+		
 	};
 
 	class Scene final {
 		protected:
 			Window* window;
 			std::vector<Asset*> assets;
+		public: 
+			Scene();
+			~Scene();
+
+			void addAsset(Asset* asset);
+			void removeAsset(Asset* asset);
 	};
 
 	class Renderer final {
 		protected:
 			Window* window;
 			Scene* scene;
+
+		public:
+			Renderer(Window* window, Scene* scene);
+			~Renderer();
 	};
 }
