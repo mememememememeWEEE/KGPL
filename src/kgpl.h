@@ -26,20 +26,28 @@ namespace KGPL {
 			auto inline getTitle() const { return title; }
 	};
 
-	class Asset final {
+	class PhysicalAsset final {
 		
+	};
+
+	class NonphysicalAsset final {
+
 	};
 
 	class Scene final {
 		protected:
 			Window* window;
-			std::vector<Asset*> assets;
+			std::vector<PhysicalAsset*> physicalAssets;
+			std::vector<NonphysicalAsset*> nonphysicalAssets;
+
 		public: 
 			Scene();
 			~Scene();
 
-			void addAsset(Asset* asset);
-			void removeAsset(Asset* asset);
+			void addAsset(PhysicalAsset* asset);
+			void addAsset(NonphysicalAsset* asset);
+			void removeAsset(PhysicalAsset* asset);
+			void removeAsset(NonphysicalAsset* asset);
 	};
 
 	class Renderer final {
